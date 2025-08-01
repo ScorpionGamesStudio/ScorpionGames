@@ -56,6 +56,18 @@ function renderCart() {
   actions.style.display = 'flex';
 }
 
+// Aggiorna il contatore del carrello nella barra di navigazione
+function updateCartCount() {
+  const countElem = document.getElementById('cart-count');
+  if (!countElem) return;
+  const cart = loadCart();
+  let totalQty = 0;
+  cart.forEach((item) => {
+    totalQty += item.quantity;
+  });
+  countElem.textContent = totalQty;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   // Aggiungi al carrello dai pulsanti nella pagina giochi
   const addButtons = document.querySelectorAll('.add-to-cart');
@@ -66,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const image = btn.getAttribute('data-image');
       addToCart({ name, price, image });
       alert(`${name} è stato aggiunto al carrello.`);
+      updateCartCount();
     });
   });
 
@@ -80,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cart.splice(index, 1);
         saveCart(cart);
         renderCart();
+        updateCartCount();
       }
     });
     // Svuota carrello
@@ -88,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
       clearBtn.addEventListener('click', () => {
         localStorage.removeItem('cartItems');
         renderCart();
+        updateCartCount();
       });
     }
     // Checkout (placeholder)
@@ -98,4 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+  // Aggiorna il contatore quando la pagina viene caricata
+  updateCartCount();
 });
