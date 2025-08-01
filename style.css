@@ -322,6 +322,25 @@ footer p {
   font-size: 0.85rem;
 }
 
+/* Cart styles */
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.cart-total {
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+#cart-actions {
+  display: flex;
+  gap: 1rem;
+}
+
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .hero h1 {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ScorpionGames - Chi siamo</title>
+    <title>ScorpionGames - Carrello</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Header -->
+    <!-- Header with navigation -->
     <header>
       <nav>
         <div class="logo">
@@ -33,31 +33,23 @@
       </nav>
     </header>
 
-    <!-- About section -->
-    <section class="container about-section">
-      <h2 class="section-title">Chi siamo</h2>
-      <p>
-        ScorpionGames nasce dall’energia creativa di <span class="about-highlight">Massy</span>,
-        un programmatore milanese con la passione per i videogiochi e
-        l’incredibile potenziale di Unreal Engine. Dopo anni di esperienza
-        nell’industria e tanto entusiasmo nel creare mondi virtuali,
-        Massy ha deciso di fondare il proprio studio indipendente. La
-        missione di ScorpionGames è semplice: combinare arte e tecnologia per
-        dare vita a esperienze videoludiche emozionanti e memorabili.
-      </p>
-      <p>
-        Il nostro team lavora con dedizione per portare giochi di alta
-        qualità ai giocatori di tutto il mondo. Ci impegniamo a sperimentare
-        nuovi generi, raccontare storie originali e utilizzare uno stile
-        visivo ricercato che possa sorprendere. Con base a Milano e un
-        occhio al futuro, ScorpionGames continuerà a spingersi oltre i
-        confini del digitale.
-      </p>
+    <section class="container">
+      <h2 class="section-title">Il tuo carrello</h2>
+      <!-- Contenitore del carrello -->
+      <div id="cart-items"></div>
+      <div id="cart-total" class="cart-total"></div>
+      <div id="cart-actions" style="display: none; margin-top: 1rem;">
+        <button type="button" class="btn" id="clear-cart">Svuota carrello</button>
+        <button type="button" class="btn" id="checkout">Procedi all'acquisto</button>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer>
       <p>&copy; 2025 ScorpionGames. Tutti i diritti riservati.</p>
     </footer>
+
+    <!-- Script per visualizzare e gestire il carrello -->
+    <script src="cart.js"></script>
   </body>
 </html>
