@@ -315,8 +315,14 @@ nav ul li a:hover {
  * consistent with blog meta styling but scoped to game cards.
  */
 .card-body .meta {
-  font-size: 0.85rem;
-  color: #666666;
+  /*
+   * Styles for version information beneath game titles.  Use a smaller
+   * font and a lighter grey to clearly differentiate it from the
+   * primary title and body text.  The colour here matches the blog
+   * metadata style, maintaining consistency across the site.
+   */
+  font-size: 0.8rem;
+  color: #888888;
   margin-bottom: 0.5rem;
 }
 
