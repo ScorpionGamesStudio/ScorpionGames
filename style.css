@@ -197,10 +197,19 @@ nav ul li a:hover {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
+/*
+ * Ensure card images retain their original aspect ratio and are not
+ * cropped or stretched. Using `height: auto` and `object-fit: contain`
+ * allows the image to scale down to fit the card width while leaving
+ * blank space above/below if necessary. A `max-height` keeps cards
+ * consistently sized across the grid.
+ */
 .card img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
+  display: block;
 }
 
 .card-body {
