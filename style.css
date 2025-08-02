@@ -309,6 +309,17 @@ nav ul li a:hover {
   margin-bottom: 0.75rem;
 }
 
+/*
+ * Version information styling within game cards. This rule styles the
+ * .meta element inside a .card-body on the games page, keeping it
+ * consistent with blog meta styling but scoped to game cards.
+ */
+.card-body .meta {
+  font-size: 0.85rem;
+  color: #666666;
+  margin-bottom: 0.5rem;
+}
+
 .blog-card-body p {
   margin-bottom: 1rem;
 }
