@@ -393,3 +393,66 @@ footer p {
     gap: 1rem;
   }
 }
+
+/*
+ * Additional responsive rules for small screens
+ *
+ * On narrow viewports the horizontal navigation links tend to overflow
+ * and hero text can wrap awkwardly.  These rules stack the
+ * navigation links vertically, reduce font sizes and paddings, and
+ * ensure the game cards fill the available width without exceeding the
+ * viewport.  The breakpoints at 600px target most mobile phones.
+ */
+@media (max-width: 600px) {
+  /* Stack the navigation bar vertically on mobile */
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+  }
+  /* Add space between the logo and the navigation list */
+  header .logo {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+  }
+  /* Make the nav list vertical and full‑width */
+  header nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  /* Slightly reduce the menu text size */
+  header nav ul li a {
+    font-size: 1rem;
+  }
+
+  /* Hero section adjustments for small screens */
+  .hero {
+    height: auto;
+    padding: 4rem 0.5rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .hero .cta-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Display one card per row on very narrow screens */
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    margin: 0 auto;
+  }
+}
+
+/* Prevent long words in card descriptions from overflowing */
+.card-body p {
+  overflow-wrap: anywhere;
+}
