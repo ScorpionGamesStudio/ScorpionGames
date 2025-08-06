@@ -404,27 +404,35 @@ footer p {
  * viewport.  The breakpoints at 600px target most mobile phones.
  */
 @media (max-width: 600px) {
-  /* Stack the navigation bar vertically on mobile */
+  /*
+   * On small viewports we keep the navigation items on a single
+   * horizontal line where possible, allowing them to wrap to a second
+   * row if the screen is too narrow.  Reducing the gap and font size
+   * helps all items fit, while flex-wrap ensures they don’t overflow.
+   */
   header nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.5rem 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.5rem 0.5rem;
   }
-  /* Add space between the logo and the navigation list */
   header .logo {
-    margin-bottom: 0.5rem;
+    /* Keep logo visible with a modest font size and ensure it stays
+     * aligned with other nav items.  Margin-right pushes the menu
+     * items away if there is space.  On wrap the logo sits on its
+     * own line.
+     */
     font-size: 1.4rem;
+    margin-right: auto;
   }
-  /* Make the nav list vertical and full‑width */
   header nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    width: auto;
   }
-  /* Slightly reduce the menu text size */
   header nav ul li a {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   /* Hero section adjustments for small screens */
