@@ -404,38 +404,54 @@ footer p {
  * viewport.  The breakpoints at 600px target most mobile phones.
  */
 @media (max-width: 600px) {
-  /*
-   * On small viewports we keep the navigation items on a single
-   * horizontal line where possible, allowing them to wrap to a second
-   * row if the screen is too narrow.  Reducing the gap and font size
-   * helps all items fit, while flex-wrap ensures they don’t overflow.
-   */
-  header nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0.5rem 0.5rem;
-  }
-  header .logo {
-    /* Keep logo visible with a modest font size and ensure it stays
-     * aligned with other nav items.  Margin-right pushes the menu
-     * items away if there is space.  On wrap the logo sits on its
-     * own line.
-     */
-    font-size: 1.4rem;
-    margin-right: auto;
-  }
-  header nav ul {
+  /* Header layout: mantieni logo e menu sulla stessa riga */
+  header {
+    padding: 0.5rem;
+    display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.75rem;
-    width: auto;
-  }
-  header nav ul li a {
-    font-size: 0.9rem;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  /* Hero section adjustments for small screens */
+  /* Logo: dimensioni ridotte e senza margini laterali */
+  header .logo {
+    font-size: 1rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* Contenitore della barra di navigazione */
+  header nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  /* Lista di navigazione: rimuovi margini/padding e imponi layout orizzontale */
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem;
+    list-style: none;
+  }
+
+  /* Link di navigazione: dimensioni ridotte e allineamento orizzontale */
+  header nav ul li a {
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    white-space: nowrap;
+    display: inline-block;
+  }
+
+  /* Hero section per piccoli schermi */
   .hero {
     height: auto;
     padding: 4rem 0.5rem;
@@ -451,16 +467,16 @@ footer p {
     padding: 0.5rem 1rem;
   }
 
-  /* Display one card per row on very narrow screens */
+  /* Card: una sola colonna su schermi stretti */
   .card-grid {
     grid-template-columns: 1fr;
   }
   .card {
     margin: 0 auto;
   }
-}
 
-/* Prevent long words in card descriptions from overflowing */
-.card-body p {
-  overflow-wrap: anywhere;
+  /* Evita che le descrizioni trabocchino */
+  .card-body p {
+    overflow-wrap: anywhere;
+  }
 }
