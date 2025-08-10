@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ScorpionGames - Notizie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="icon.png" alt="Logo ScorpionGames" />
+          ScorpionGames
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Chi siamo</a></li>
+          <li><a href="games.html">Giochi</a></li>
+          <li><a href="notizie.html">Notizie</a></li>
+          <li><a href="social.html">Social</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="news-intro">
+      <h2 class="section-title">Notizie</h2>
+      <p>
+        Qui raccolgo gli aggiornamenti sul progetto <strong>Raffineria Simulatore</strong>:
+        versioni, nuove funzionalità, miglioramenti e correzione bug.
+      </p>
+    </section>
+
+    <section class="changelog">
+      <!-- Entry: Raffineria Simulatore v1.0.0 Beta -->
+      <article class="version-card" id="raffineria-1-0-0-beta">
+        <h3>
+          Raffineria Simulatore — v1.0.0 <span class="badge">Beta</span>
+        </h3>
+        <div class="version-meta">Data: <time datetime="2025-08-10">10 agosto 2025</time> ·
+          <span class="tag">Gameplay</span><span class="tag">Bugfix</span><span class="tag">UI</span>
+        </div>
+
+        <h4>Nuove funzionalità</h4>
+        <ul>
+          <li>Prima versione beta giocabile con ciclo base di <em>distillazione</em> e <em>stoccaggio</em>.</li>
+          <li>Cruscotto di controllo impianto con indicatori di pressione/temperatura.</li>
+          <li>Schermata economia con costi energetici e ricavi prodotti raffinati.</li>
+        </ul>
+
+        <h4>Miglioramenti</h4>
+        <ul>
+          <li>Ottimizzazione FPS su scene ricche di piping e valvole.</li>
+          <li>Bilanciamento tempi di avviamento impianto e consumi.</li>
+        </ul>
+
+        <h4>Bugfix</h4>
+        <ul>
+          <li>Risolto blocco UI durante lo spegnimento d’emergenza.</li>
+          <li>Fix calcolo inventario barili in magazzino (overflow oltre 999 correttamente gestito).</li>
+        </ul>
+
+        <p style="margin-top:0.5rem;">
+          Download: <a class="btn" href="https://scorpiongamestudio.itch.io/raffineria-simulatore">Itch.io</a>
+        </p>
+      </article>
+
+      <!-- TEMPLATE per versioni future: copia e incolla
+      <article class="version-card" id="raffineria-1-0-1">
+        <h3>Raffineria Simulatore — v1.0.1 <span class="badge">Patch</span></h3>
+        <div class="version-meta">Data: <time datetime="YYYY-MM-DD">GG mese AAAA</time> ·
+          <span class="tag">Categoria1</span><span class="tag">Categoria2</span>
+        </div>
+
+        <h4>Nuove funzionalità</h4>
+        <ul>
+          <li>…</li>
+        </ul>
+
+        <h4>Miglioramenti</h4>
+        <ul>
+          <li>…</li>
+        </ul>
+
+        <h4>Bugfix</h4>
+        <ul>
+          <li>…</li>
+        </ul>
+
+        <p style="margin-top:0.5rem;">
+          Download: <a class="btn" href="https://scorpiongamestudio.itch.io/raffineria-simulatore">Itch.io</a>
+        </p>
+      </article>
+      -->
+    </section>
+
+    <footer>
+      <p>&copy; 2025 ScorpionGames. Tutti i diritti riservati.</p>
+    </footer>
+  </body>
+</html>
