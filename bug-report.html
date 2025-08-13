@@ -39,118 +39,133 @@
   </style>
 </head>
 <body>
-  <!-- Header / Nav (copiato dallo stile del sito) -->
-  <header>
-    <nav>
-      <div class="logo">
-        <img src="icon.png" alt="Logo ScorpionGames" />
-        ScorpionGames
-      </div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">Chi siamo</a></li>
-        <li><a href="games.html">Giochi</a></li>
-        <li><a href="notizie.html">Notizie</a></li>
-        <li><a href="social.html">Social</a></li>
-        <li><a href="bug-report.html" class="active">Segnala bug</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Header / Nav (copiato dallo stile del sito) -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="icon.png" alt="Logo ScorpionGames" />
+                ScorpionGames
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Chi siamo</a></li>
+                <li><a href="games.html">Giochi</a></li>
+                <li><a href="notizie.html">Notizie</a></li>
+                <li><a href="social.html">Social</a></li>
+                <li><a href="bug-report.html" class="active">Segnala bug</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section class="bug-wrapper">
-    <h2 class="section-title">Segnala un bug</h2>
+    <section class="bug-wrapper">
+        <h2 class="section-title">Segnala un bug</h2>
 
-    <div id="success" class="success">Grazie! La tua segnalazione è stata inviata correttamente.</div>
+        <div id="success" class="success">Grazie! La tua segnalazione è stata inviata correttamente.</div>
 
-    <div class="bug-card">
-      <form id="bugForm" action="ACTION_URL_DEL_TUO_SERVIZIO" method="POST" enctype="multipart/form-data">
-        <!-- Hidden tech fields (prefilled from query string) -->
-        <input type="hidden" name="game" value="Raffineria Simulatore" />
-        <input type="hidden" name="version" id="f-version" />
-        <input type="hidden" name="map" id="f-map" />
-        <input type="hidden" name="platform" id="f-platform" />
-        <input type="hidden" name="session" id="f-session" />
+        <div class="bug-card">
+            <form id="bugForm" action="https://getform.io/f/bgdjdjna" method="POST" enctype="multipart/form-data">
+                <!-- Redirect dopo invio -->
+                <input type="hidden" name="redirect" value="https://scorpiongamesstudio.github.io/ScorpionGames/bug-report.html?ok=1" />
+                <!-- Hidden tech fields (prefilled from query string) -->
+                <input type="hidden" name="game" value="Raffineria Simulatore" />
+                <input type="hidden" name="version" id="f-version" />
+                <input type="hidden" name="map" id="f-map" />
+                <input type="hidden" name="platform" id="f-platform" />
+                <input type="hidden" name="session" id="f-session" />
 
-        <div class="bug-grid">
-          <div class="full">
-            <label for="description">Descrizione *</label>
-            <textarea id="description" name="description" required placeholder="Cosa è successo, quando e dove (es. schermata/mappa)?"></textarea>
-            <div id="descError" class="error-msg">Inserisci almeno 10 caratteri.</div>
-          </div>
+                <div class="bug-grid">
+                    <div class="full">
+                        <label for="description">Descrizione *</label>
+                        <textarea id="description" name="description" required placeholder="Cosa è successo, quando e dove (es. schermata/mappa)?"></textarea>
+                        <div id="descError" class="error-msg">Inserisci almeno 10 caratteri.</div>
+                    </div>
 
-          <div class="full">
-            <label for="steps">Passi per riprodurre</label>
-            <textarea id="steps" name="steps" placeholder="1) ... 2) ... 3) ..."></textarea>
-          </div>
+                    <div class="full">
+                        <label for="steps">Passi per riprodurre</label>
+                        <textarea id="steps" name="steps" placeholder="1) ... 2) ... 3) ..."></textarea>
+                    </div>
 
-          <div>
-            <label for="severity">Gravità</label>
-            <select id="severity" name="severity">
-              <option value="low">Bassa (cosmetico)</option>
-              <option value="medium" selected>Media (fastidioso)</option>
-              <option value="high">Alta (blocca il gioco)</option>
-            </select>
-          </div>
+                    <div>
+                        <label for="severity">Gravità</label>
+                        <select id="severity" name="severity">
+                            <option value="low">Bassa (cosmetico)</option>
+                            <option value="medium" selected>Media (fastidioso)</option>
+                            <option value="high">Alta (blocca il gioco)</option>
+                        </select>
+                    </div>
 
-          <div>
-            <label for="email">Email (facoltativa, per ricontatto)</label>
-            <input id="email" type="email" name="email" placeholder="nome@esempio.com" />
-          </div>
+                    <div>
+                        <label for="email">Email (facoltativa, per ricontatto)</label>
+                        <input id="email" type="email" name="email" placeholder="nome@esempio.com" />
+                    </div>
 
-          <div class="full">
-            <label for="screenshot">Screenshot (PNG/JPG, facoltativo)</label>
-            <input id="screenshot" type="file" name="screenshot" accept="image/*" />
-            <div class="help">Puoi scattare uno screenshot dal gioco e allegarlo qui.</div>
-          </div>
+                    <div class="full">
+                        <label for="screenshot">Screenshot (PNG/JPG, facoltativo)</label>
+                        <input id="screenshot" type="file" name="screenshot" accept="image/*" />
+                        <div class="help">Puoi scattare uno screenshot dal gioco e allegarlo qui.</div>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="btn" type="submit">Invia segnalazione</button>
+                    <a class="btn-secondary" href="index.html">&larr; Torna alla Home</a>
+                </div>
+                <p class="note">Inviando accetti che vengano inviati i dati tecnici (versione, mappa, piattaforma) per facilitare la riproduzione.</p>
+            </form>
         </div>
+    </section>
 
-        <div class="actions">
-          <button class="btn" type="submit">Invia segnalazione</button>
-          <a class="btn-secondary" href="index.html">&larr; Torna alla Home</a>
-        </div>
-        <p class="note">Inviando accetti che vengano inviati i dati tecnici (versione, mappa, piattaforma) per facilitare la riproduzione.</p>
-      </form>
-    </div>
-  </section>
+    <footer>
+        <p>&copy; 2025 ScorpionGames. Tutti i diritti riservati.</p>
+    </footer>
 
-  <footer>
-    <p>&copy; 2025 ScorpionGames. Tutti i diritti riservati.</p>
-  </footer>
+    <script>
+        // Prefill hidden fields from query string (?game=Raffineria&version=1.0.3&map=Refinery01&platform=Windows)
+        const qs = new URLSearchParams(location.search);
+        const $ = (id) => document.getElementById(id);
 
-  <script>
-    // Prefill hidden fields from query string (?version=1.0.3&map=Refinery01&platform=Windows)
-    const qs = new URLSearchParams(location.search);
-    const $ = (id)=>document.getElementById(id);
+        const game = qs.get('game') || '';   // <-- aggiunto
+        const version = qs.get('version') || '';
+        const map = qs.get('map') || '';
+        const platform = qs.get('platform') || (navigator.userAgent || '');
+        const sessionId = (crypto && crypto.randomUUID) ? crypto.randomUUID()
+            : (Date.now() + '-' + Math.random().toString(16).slice(2));
 
-    const version = qs.get('version') || '';
-    const map = qs.get('map') || '';
-    const platform = qs.get('platform') || (navigator.userAgent || '');
-    const sessionId = crypto && crypto.randomUUID ? crypto.randomUUID() : (Date.now() + '-' + Math.random().toString(16).slice(2));
+        // Scrivi nei campi hidden
+        $('f-game') && ($('f-game').value = game);    // <-- aggiunto
+        $('f-version') && ($('f-version').value = version);
+        $('f-map') && ($('f-map').value = map);
+        $('f-platform') && ($('f-platform').value = platform);
+        $('f-session') && ($('f-session').value = sessionId);
 
-    $('f-version').value = version;
-    $('f-map').value = map;
-    $('f-platform').value = platform;
-    $('f-session').value = sessionId;
+        // (Opzionale) mostra i dati tecnici in pagina
+        if (document.getElementById('tech')) {
+            document.getElementById('g').textContent = game || '—';
+            document.getElementById('v').textContent = version || '—';
+            document.getElementById('m').textContent = map || '—';
+            document.getElementById('p').textContent = platform || '—';
+            document.getElementById('tech').style.display = 'block';
+        }
 
-    // Simple validation helper
-    const form = document.getElementById('bugForm');
-    form.addEventListener('submit', (e)=>{
-      const desc = document.getElementById('description').value.trim();
-      const err = document.getElementById('descError');
-      if(desc.length < 10){
-        e.preventDefault();
-        err.style.display='block';
-        document.getElementById('description').focus();
-        return false;
-      } else {
-        err.style.display='none';
-      }
-    });
+        // Validazione descrizione
+        const form = document.getElementById('bugForm');
+        form.addEventListener('submit', (e) => {
+            const desc = document.getElementById('description').value.trim();
+            const err = document.getElementById('descError');
+            if (desc.length < 10) {
+                e.preventDefault();
+                err.style.display = 'block';
+                document.getElementById('description').focus();
+                return false;
+            } else {
+                err.style.display = 'none';
+            }
+        });
 
-    // Show success alert if redirected with ?ok=1
-    if(qs.get('ok') === '1'){
-      document.getElementById('success').style.display = 'block';
-    }
-  </script>
+        // Success message
+        if (qs.get('ok') === '1') {
+            document.getElementById('success').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
