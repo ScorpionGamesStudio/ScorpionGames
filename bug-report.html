@@ -3,125 +3,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Segnala un bug in Raffineria Simulatore. Il tuo feedback aiuta a migliorare il gioco." />
+    <meta property="og:title" content="Segnala un Bug — ScorpionGames" />
+    <meta property="og:description" content="Hai trovato un bug in Raffineria Simulatore? Segnalacelo qui." />
+    <meta property="og:image" content="https://scorpiongamesstudio.github.io/ScorpionGames/icon.png" />
     <title>Segnala un bug - ScorpionGames</title>
-    <!-- Google Fonts -->
+    <link rel="icon" href="icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
-    <style>
-        .bug-wrapper {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-
-        .bug-card {
-            background: #fff;
-            border-radius: var(--border-radius);
-            box-shadow: 0 6px 16px rgba(0,0,0,.12);
-            padding: 1.25rem 1.25rem 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .bug-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-
-            .bug-grid .full {
-                grid-column: 1 / -1;
-            }
-
-        label {
-            font-weight: 600;
-            margin-bottom: .35rem;
-            display: block;
-            color: var(--primary-color);
-        }
-
-        input[type="text"], input[type="email"], textarea, select, input[type="file"] {
-            width: 100%;
-            padding: .75rem;
-            border: 1px solid #d0d7e2;
-            border-radius: 10px;
-            background: #f9fbff;
-            outline: none;
-            color: #1a2530;
-        }
-
-        textarea {
-            min-height: 140px;
-            resize: vertical;
-        }
-
-        .help {
-            font-size: .85rem;
-            color: #667;
-            margin-top: .25rem;
-        }
-
-        .actions {
-            margin-top: 1rem;
-            display: flex;
-            gap: .75rem;
-            align-items: center;
-        }
-
-        .btn-secondary {
-            background: #eef5ff;
-            color: #0b3d91;
-            border-radius: 6px;
-            padding: .6rem 1rem;
-            font-weight: 600;
-        }
-
-        .note {
-            font-size: .9rem;
-            color: #4b5563;
-            margin-top: .75rem;
-        }
-
-        .success {
-            background: #ecfdf5;
-            border: 1px solid #a7f3d0;
-            color: #065f46;
-            padding: .75rem 1rem;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-            display: none;
-        }
-
-        .error-msg {
-            color: #b91c1c;
-            font-size: .9rem;
-            display: none;
-            margin-top: .25rem;
-        }
-
-        .final-message {
-            margin-top: 2rem;
-            font-size: 0.95rem;
-            color: #333;
-            background: #fffbea;
-            border: 1px solid #fcd34d;
-            padding: 1rem;
-            border-radius: 10px;
-            line-height: 1.5;
-        }
-
-        @media (max-width: 860px) {
-            .bug-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
-        <nav>
+        <nav aria-label="Navigazione principale">
             <div class="logo">
                 <img src="icon.png" alt="Logo ScorpionGames" />
                 ScorpionGames
@@ -201,7 +96,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 ScorpionGames. Tutti i diritti riservati.</p>
+        <p>&copy; 2025–2026 ScorpionGames. Tutti i diritti riservati.</p>
     </footer>
 
     <script>
@@ -211,7 +106,7 @@
         const version = qs.get('version') || '';
         const map = qs.get('map') || '';
         const platform = qs.get('platform') || (navigator.userAgent || '');
-        const sessionId = (crypto && crypto.randomUUID) ? crypto.randomUUID()
+        const sessionId = crypto.randomUUID ? crypto.randomUUID()
             : (Date.now() + '-' + Math.random().toString(16).slice(2));
 
         $('f-version') && ($('f-version').value = version);

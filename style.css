@@ -92,6 +92,11 @@ nav ul {
             opacity: .75;
         }
 
+        nav ul li a.active {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 2px;
+        }
+
 /* Hero */
 .hero {
     display: flex;
@@ -503,4 +508,138 @@ footer {
     background: #eef5ff;
     color: #0b3d91;
     margin-right: .35rem;
+}
+
+/* === Bug Report Form === */
+.bug-wrapper {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.bug-card {
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 6px 16px rgba(0,0,0,.12);
+    padding: 1.25rem 1.25rem 1.5rem;
+    margin-top: 1rem;
+}
+
+.bug-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.bug-grid .full {
+    grid-column: 1 / -1;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: .35rem;
+    display: block;
+    color: var(--primary-color);
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select,
+input[type="file"] {
+    width: 100%;
+    padding: .75rem;
+    border: 1px solid #d0d7e2;
+    border-radius: 10px;
+    background: #f9fbff;
+    outline: none;
+    color: #1a2530;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.help {
+    font-size: .85rem;
+    color: #667;
+    margin-top: .25rem;
+}
+
+.actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+}
+
+.btn-secondary {
+    background: #eef5ff;
+    color: #0b3d91;
+    border-radius: 6px;
+    padding: .6rem 1rem;
+    font-weight: 600;
+}
+
+.note {
+    font-size: .9rem;
+    color: #4b5563;
+    margin-top: .75rem;
+}
+
+.success {
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    color: #065f46;
+    padding: .75rem 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.error-msg {
+    color: #b91c1c;
+    font-size: .9rem;
+    display: none;
+    margin-top: .25rem;
+}
+
+.final-message {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    color: #333;
+    background: #fffbea;
+    border: 1px solid #fcd34d;
+    padding: 1rem;
+    border-radius: 10px;
+    line-height: 1.5;
+}
+
+@media (max-width: 860px) {
+    .bug-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* === 404 Page === */
+.not-found {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.not-found-code {
+    font-size: 6rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.not-found p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #555;
 }
